@@ -1,0 +1,150 @@
+/*----------------------------------
+	
+	Mojoomla WP Documentaion
+	
+	
+	------------------------------------------------------------------------*/
+	@import url('./base.css'); /* Import Basic Styles, Typography, Forms etc stylesheet */
+	@import url('./scaffolding.css'); /* Import Bootstrap Stylesheet */
+	@import url('./icomoon.css'); /* Import Vector Icons Stylesheet */
+	
+	/*-----------------------------------------------------------------------------------*/
+	
+	
+	
+	/* #Site Styles
+	================================================== */
+	
+	/* WRAPPER */ 
+	
+	#wrap { margin: 0 auto; position: relative; padding: 0; background: #fff; 
+	max-width:1300px; -webkit-box-shadow: 0 0 9px rgba(0,0,0,0.4); -moz-box-shadow: 0 0 7px rgba(0,0,0,0.4); box-shadow: 0 0 7px rgba(0,0,0,0.4); }
+	#header { border-bottom: 4px solid #f3f3f3; position:; background: #fff; width: 100% }
+	#header .desc { margin-top:20px }
+	.logo {margin-top:10px;
+	margin-bottom:10px;}
+	#header-sm, #footer-sm {display:none}
+	#side-content section {min-height: 800px; padding-top: 50px}
+	#side-content section img {padding: 7px;background: #F3F3F3;border-radius: 2px; border: 1px solid #CECECE;margin: 15px auto;  box-sizing: border-box;}
+	#footer {border-top: 4px solid #f3f3f3; color: #969a9e;font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-transform: capitalize; padding: 20px 0; margin: 20px 0;}	
+	.note {color:green; line-height:1.4; font-size: 21px;}
+	/* ----- 
+	hr{
+	margin-bottom:20%;
+	} --- */
+
+	
+	/* --------------------- */
+	
+	/* Side Nav */
+	
+	#side-nav { z-index:979; height: 90% ; margin-top:15px;
+position: fixed;
+
+}
+	#side-nav ul { padding: 10px 20px;background: #fff;border: 4px solid #f3f3f3; list-style: none;overflow-y: auto;height: 85%; }
+	#side-nav ul li { border-bottom:1px solid #eaeaea; padding:0; margin:0;}
+	#side-nav ul li:last-of-type { border-bottom:0 none;}
+	#side-nav ul li ul { border:0 none; padding:0; padding-left:20px; margin:0; background:#fdfdfd; display:none;}
+	#side-nav a { display:block; color:#575757; padding:5px 0; text-transform:capitalize; font-size:13px; font-weight:400; letter-spacing:0.2px;background:url("img/arrow_right_black.png") no-repeat scroll right center rgba(0, 0, 0, 0);  }
+	/*#side-nav a:after { float:right;  font-family: 'icomoon'; font-size:8px; color:#878787; content: "\e3b0"; speak: none; font-style: normal; font-weight: normal; text-transform: none; line-height: 3; -webkit-font-smoothing: antialiased; }*/
+	#side-nav a:hover{ color:#FF9933;background:url("img/arrow_right_yellow.png") no-repeat scroll right center rgba(0, 0, 0, 0);}
+	#side-nav .active a{color:#FF9933;background:url("img/arrow_right_yellow.png") no-repeat scroll right center rgba(0, 0, 0, 0);}
+	#side-nav ul li ul li a { padding:10px 0; font-size:12px;}
+	#side-nav ul li:hover > ul { display:block;}
+	
+
+
+	
+
+	
+	/* #Misc
+	================================================== */
+	
+	/* EXTRAS */
+	
+	.brdr-r1, .brdr-r2 { border-right: 1px solid #e5e5e5; padding-right: 19px; }
+	.brdr-l1, .brdr-l2 { border-left: 1px solid #e5e5e5; padding-left: 19px; }
+	.brdr-r2 { padding-right: 27px; }
+	.brdr-l2 { padding-left: 27px; }
+	.pad-r27 { padding-right: 27px; }
+	.pad-l27 { padding-left: 27px; }
+	.alignright { text-align: right; }
+	img.alignright { float: right; }
+	.alignleft { text-align: left; }
+	img.alignleft { float: left; }
+	.aligncenter { text-align: center; }
+	.wp-caption { display: block; color: #444; }
+	.wp-caption-text { font-size: 15px; }
+	.sticky { color: #555; }
+	.gallery-caption { display: inline; }
+	.bypostauthor { font-size: 13px; }
+	.moonicons-box1 { font-size: 16px; display: inline-block; width: 15em; padding: .25em .5em; background: #fff; margin: .5em 1em .5em 0; border: 1px solid #e8e8e8; }
+	.alignright { text-align: right; }
+	img.alignright { float: right; }
+	.alignleft { text-align: left; }
+	img.alignleft { float: left; }
+	.aligncenter { text-align: center; }
+	.wp-caption { display: block; color: #444; }
+	.wp-caption-text { font-size: 15px; }
+	.sticky { color: #555; }
+	.gallery-caption { display: inline; }
+	.bypostauthor { font-size: 13px; }
+	
+	
+	/* Distance (Vertical Spaces) */
+	
+	.vertical-space, .vertical-space1, .vertical-space2, .vertical-space3, .vertical-space4, .vertical-space5 { display: block; width: 100%; margin: 0; clear: both; border: 0 none; height: 20px; }
+	.vertical-space2 { height: 40px; }
+	.vertical-space3 { height: 60px; }
+	.vertical-space4 { height: 80px; }
+	.vertical-space5 { height: 100px; }
+	*+html hr.vertical-space, *+html hr.vertical-space1, *+html hr .vertical-space2, *+html hr.vertical-space3, *+html hr.vertical-space4, *+html hr.vertical-space5 { height: 0px; margin: 10px 0; background: #fff; border: 1px solid #fff; }
+	*+html hr.vertical-space2 { margin: 20px 0; }
+	*+html hr.vertical-space3 { margin: 30px 0; }
+	*+html hr.vertical-space4 { margin: 40px 0; }
+	*+html hr.vertical-space5 { margin: 50px 0; }
+	
+	
+	/* Scroll to top */
+	
+	#scroll-top a { width: 35px; height: 25px; padding: 6px 8px 9px; border-radius: 4px; background: #818c90; position: fixed; bottom: 48px; right: 32px; display: none; opacity: 0.89; filter: alpha(opacity=89); z-index: 499841;background:url("img/back-to-top.png") no-repeat scroll center center #dfdfdf; }
+	#scroll-top a i { font-size: 16px; color: #fff; }
+	#scroll-top a:hover { background-color: #444; cursor: pointer; }
+	
+
+	
+	/* #Media Queries
+	================================================== */
+
+	
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 992px) {
+
+		#side-nav { position: relative;}
+		#header-sm {display:block;position: relative; top: 0; width: 100%;}
+		#header-sm .logo , #header-sm .desc{ text-align: center; }
+		#footer-sm {display:block; position: relative; bottom: 0; width: 100%; border-top: 4px solid #f3f3f3; color: #969a9e;font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-transform: capitalize; padding: 10px 0; margin: 10px 0;}
+		#side-content section {min-height: 100%;}
+		#header, #footer {display:none;}
+		#side-content section {padding-top: 10px;}		
+		#side-nav ul {border-radius: 16px 16px 0 0}
+		
+	}
+	
+	@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	
+		#side-content {margin-left: 10%}
+		
+	}
+	
+	@media only screen and (min-width: 992px) {
+	
+		#side-nav ul {width: 100%}
+		
+	}
+
+
+	/* ---------------------
+	
+	
