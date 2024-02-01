@@ -58,6 +58,7 @@
 					<li><a class="current" href="#Introduction">Introduction</a></li>
 					<li><a href="#Installation">Installation</a></li>
 					<li><a href="#system-settings">System Settings</a></li>
+					<li><a href="#recurring-invoice">Recurring Invoices</a></li>
 					<li><a href="#fronted-login">Frontend Pages Settings</a></li>
 					<li><a href="#setting-up-Language">setting up Language</a></li>
 					<li><a href="#admin_view">Admin</a></li>
@@ -77,7 +78,7 @@
 					<div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo"></a> </div>
 						<div class="col-md-8 col-md-offset-1 desc">
 						  <h4 class="slight">School Management System</h4>
-						  <h5 class="slight"><small> Created and modified by Mojoomla </a> - 25 Jan 2023</small></h5>
+						  <h5 class="slight"><small> Created and modified by Mojoomla </a> - 26 January 2024</small></h5>
 						</div>
 					</div>
 					<hr class="vertical-space2">
@@ -189,6 +190,7 @@
 										<li><strong>School Logo: </strong>Enter school logo.</li>
 										<li><strong>Profile Cover Image: </strong>Upload school photo and this will be used for profile background.</li>
 										<li><strong>Enable Sandbox: </strong>If you are testing PayPal payments then it should be enable/checked.You will require PayPal sandbox account.</li>
+										<li><strong>System Color: </strong>You can change system color.</li>
 										<li><strong>Paypal Email Id: </strong>Enter here your email id.</li>
 										<li><strong>Select Currency: </strong>From here select your currency.</li>
 										<li><strong>Mail Notification: </strong>If you enable mail notification then the system send mail notification to users then it should be enabled/checked.</li>
@@ -248,9 +250,30 @@
 								<img alt="display content of the invoice" src="images/admin/access_right/support_staff_access.png"><br><br>
 							</section>
 						</section>
-						
+
+						<section id="recurring-invoice">
+							<h3><strong>D) Recurring Invoices</strong></h3>
+							<ol>
+								<li><strong>General Setting Page</strong></li>
+								<p>If you want to set recurring invoices then Enable the Recurring Invoice option on the general setting page.</p>
+								<img alt="" src="images/general-settings.png"><br><br>
+								<li><strong>Generate Recurring Invoice</strong></li>
+								<p>Go to : <strong>Payment=>Fees Payment=>Add Fees Payment</strong></p>
+								<p>You can generate recurring invoices with one-time, monthly, quarterly, and half-yearly recurring options.</p>
+								<img alt="" src="images/add_fees_payment.png"><br><br>
+								<p>You can see generated recurring invoices & Also, you can Edit & Delete recurring invoices.</p>
+								<p>We Are Generate next recurring invoice For Selected Students.</p>
+								<p>if you want to generate next recurring invoice for other students than edit recurring fees payment.</p>
+								<img alt="" src="images/edit_fees_payment.png"><br><br>
+								<li><strong>Server Cronjob Settings.</strong></li>
+								<p>Set 24 hours cronjob in your server for recurring invoices.</p>
+								<img alt="" src="images/add-Cron-Jobs.png"><br><br>
+								<p>For Example: <strong>/usr/local/bin/php -q -f /home/dlifcom/public_html/wp-content/plugins/school-management/recurring_invoices.php</strong></p>
+							</ol>   
+						</section>
+
 						<section id="fronted-login">
-							<h3><strong>D) Frontend Pages Settings</strong></h3>
+							<h3><strong>E) Frontend Pages Settings</strong></h3>
 							<p><strong>Once install this plugin, Plugin create <mark>School Management Login Page, Registration page and Admission page</mark>. You can simply  create menu link.</strong></p>
 							<img alt="" src="images/loginpage.png"> <br><br>
 
@@ -291,7 +314,7 @@
 						</section> -->
 
 						<section id="setting-up-Language">
-							<h3><strong>E) Setting Up Language</strong></h3>
+							<h3><strong>F) Setting Up Language</strong></h3>
 							<p>We have given all languages .PO files in our plugin.</p>
 							<h5><strong>1) How to set site language </strong><h5></h5>
 								<ol>
@@ -327,7 +350,7 @@
 						</section>
 						
 						<section id="admin_view">
-							<h3><strong>F) Admin</strong></h3>
+							<h3><strong>G) Admin</strong></h3>
 							<p><strong>Dashboard:</strong> Admin side dashboard view.</p>
 							<img alt="Install plugin" src="images/admin/dashboard/dashboard.png">
 							<hr>
@@ -341,7 +364,8 @@
 							<ul>
 								<ol>
 									<li><strong>Domain:</strong> This is your domain name. You don't need to enter it. System will automatically fetch it. </li>
-									<li><strong>Envato License key: </strong>Enter envato licence key of the school plugin. </li>
+									<li><strong>Envato License key: </strong>Enter envato licence key of the school plugin.</li>
+									<li><a href="https://www.dasinfomedia.com/how-to-find-codecanyon-purchase-key/"><strong>How to find your license key (purchase code)</strong></a></li>
 									<li><strong>Email: </strong>Enter your email.</li>
 								</ol>
 							</ul>
@@ -365,6 +389,7 @@
 									<li><strong>School Logo: </strong>Enter school logo.</li>
 									<li><strong>Profile Cover Image: </strong>Upload school photo and this will be used for profile background.</li>
 									<li><strong>Enable Sandbox: </strong>If you are testing PayPal payments then it should be enable/checked.You will require PayPal sandbox account.</li>
+									<li><strong>System Color: </strong>You can change system color.</li>
 									<li><strong>Paypal Email Id: </strong>Enter here your email id.</li>
 									<li><strong>Select Currency: </strong>From here select your currency.</li>
 									<li><strong>Mail Notification: </strong>If you enable mail notification then the system send mail notification to users then it should be enabled/checked.</li>
@@ -400,13 +425,6 @@
 									<li><strong>Email</strong>: Enter email id of student. Email ID must be unique.</li>
 									<li><strong>Previous School</strong>: Enter Student Previous School.</li>
 									<h6><strong><li>Siblings Information</li></strong></h6>
-									<li><strong>Relation Type</strong>: Select Relation Type</li>
-									<li><strong>Full Name</strong>: Enter Full Name.</li>
-									<li><strong>Age</strong>: Enter Age.</li>
-									<img alt="add_admisiion" src="images/admin/admission/add_standard.png"><br><br>
-									<li><strong>Standard</strong>: Select Standard.</li>
-									<li><strong>SID</strong>: Enter SID.</li>
-									<h6><strong><li>You can add more Siblings Information</li></strong></h6>
 									<img alt="add_admisiion" src="images/admin/admission/add_more.png"><br><br>
 									<h6><strong><li>Family Information</li></strong></h6>
 									<li><strong>Parental Status</strong>: Select Parental Status</li>
@@ -505,8 +523,15 @@
 								<br> 
 								
 								<h5><strong><li>Upload Student CSV File</li></strong></h5> 
-								<p>You can upload bulk of student data in csv(Demo csv file studentlist.csv see in plugins).</p>
-								<img alt="upload_student" src="images/admin/student/upload_student.png">
+								<p>You can upload bulk student data with CSV.</p>
+								<p>we have given a sample file in Package and our plugin folder.</p>
+								<img alt="upload_student" src="images/admin/student/upload_student.png"><br><br>
+								<p>How to import custom field value with CSV file.</p>
+								<p>1) Copy the Custom Field label name and add it to the CSV file.</p>
+								<p>2) We have provided import custom field instructions in the import student popup. </p>
+								<p>3) Must follow instructions.</p>
+								<img alt="upload_student" src="images/admin/student/sample_csv.png"><br><br>
+								<img alt="upload_student" src="images/admin/student/custom_field_label.png">
 								<br><br>
 								
 								<h5><strong><li>Export Student In CSV</li></strong></h5> 
@@ -711,10 +736,6 @@
 									<p></p>
 									<img alt="display content of the teacher attendance" src="images/admin/attendance/teacher_attendance.png"><br><br>
 									<p>Here you can also take teachers attendance .</p>
-								<h5><strong><li> Subject Wise Attendance</li></strong></h5>
-									<p></p>
-									<img alt="display content of the subject attendance" src="images/admin/attendance/sub_attendance.png"><br><br>
-									<p>Here you can also take subject wise student attendance .</p>
 								<h5><strong><li>Upload attendance CSV File</li></strong></h5> 
 									<p>You can upload attendance data in csv.</p>
 									<img alt="import_attendance" src="images/admin/attendance/import_attendance.png">
@@ -722,6 +743,10 @@
 								<h5><strong><li>Export attendance In CSV</li></strong></h5> 
 									<p>You can export attendance data in csv format</p>
 									<img alt="export_attendance" src="images/admin/attendance/export_attendance.png">
+									<br><br>
+								<h5><strong><li>Attendance With QR Code</li></strong></h5> 
+									<p>You can add the attendance by scanning the QR code.</p>
+									<img alt="export_attendance" src="images/admin/attendance/qr_attendance.png">
 							</ol>
 							<hr>
 						</section>
@@ -921,7 +946,7 @@
             
 			<section id="Notice">
             <h4><strong>20) Notice</strong></h4>
-            <p>Here You can see and manage list of Event to notice for teacher, student and all. We have provided date range in notice segment so this can also be used as event calendar</p>
+            <p>Here You can see and manage a list of Events to notice for teachers, students, and all. We have provided a date range in the notice segment so this can also be used as an event calendar</p>
             
             <img alt="display content of the notice " src="images/admin/notice/notice_list.png">
             <ol>
@@ -1225,6 +1250,7 @@
 			<ol>
 			<h5><strong><li>Add Custom Fields</li></strong></h5>
 			 <p>Admin Can Add Custom Fields Like TextBox,label,Checkbox,Dropdawn,Radio,Files,date.</p>
+			 <p>If you want to show custom field values in the student list then enable the option in custom field.</p>
             <img alt="add_holiday" src="images/admin/custome_field/add_custome_field.png"><br><br>
 			<h5><strong><li>View Custom Fields</li></strong></h5>
 			 <p>View Custom Fields in Student Add Form</p>
@@ -1293,7 +1319,7 @@
       </section>
 	 
         <section id="student_view">
-			<h3><strong>G)  Student View:</strong></h3>
+			<h3><strong>H)  Student View:</strong></h3>
 			
 			<section id="student-dashboard">
 				<p>Click on <strong>Dashboard</strong> and student can see student side dashboard.</p> 
@@ -1305,14 +1331,7 @@
 				<p>Click on <strong>Teacher</strong> and a student can see all details about it class Teacher.</p> 
 				<img alt="" src="images/student/teacher_list.png"><br><br>           
 				<p>Where a student can see just own class Teacher But all Teacher list possible with giving Access rights. </p>
-			
-				<ol>
-					<h5><strong><li>View Teacher:</li></strong></h5>
-					<p>Admin can view Teacher by clicking on the <strong>view</strong> button. This will open the view Teacher page. see the personal information and contact information and Time Table of the particular teacher.</p>			
-					<img alt="view_teacher" src="images/student/view_teacher.png">
-					<br>
-					<br> 
-				</ol>			
+		
             <hr>
             </section>
 			<section id="student-list">
@@ -1516,7 +1535,7 @@
 		</section>
 
 		 <section id="parent_view">
-			<h3><strong>H)  Parent View:</strong></h3>
+			<h3><strong>I)  Parent View:</strong></h3>
 			<p><strong>Dashboard:</strong> Parent side dashboard view.</p>
 			<img alt="Install plugin" src="images/parent/parent_dashboard.png">
 			<hr>
@@ -1525,13 +1544,6 @@
             <p>Click on <strong>Teacher</strong> and a Parent can see all details about own child class Teacher.</p> 
             <img alt="" src="images/parent/teacher_list.png"><br><br>           
 			<p>Where a Parent can see just own child class Teacher. </p>
-			<ol>
-				<h5><strong><li>View Teacher:</li></strong></h5>
-				<p>Parent can view Teacher by clicking on the <strong>view</strong> button. This will open the view Teacher page. see the personal information and contact information and Time Table of the particular teacher.</p>			
-				<img alt="view_teacher" src="images/parent/view_teacher.png">
-				<br>
-				<br> 
-			</ol>		
              <hr>
 			</section>
 			
@@ -1673,7 +1685,7 @@
 		</section>
 		
 			<section id="teacher_view">
-				 <h3><strong>I)  Teacher View:</strong></h3>
+				 <h3><strong>J)  Teacher View:</strong></h3>
 				 <p><strong>Dashboard:</strong> Teacher side dashboard view.</p>
 				<img alt="Install plugin" src="images/teacher/teacher_dashboard.png">
             <hr>
@@ -1756,12 +1768,6 @@
 			<p>If you want to see attendance of any past dates then just enter date and select class and click on <strong>Take/view Attendance</strong>. 
 			You can just view past days attendance but you can't edit. While for current date it allows you to edit the attendance</p>
 			<p>If student is absent and send sms to his/her parent's then check the check-box.</p>
-			 <h5><strong>3. Subject Wise Attendance</strong></h5> 
-             <p></p>
-            <img alt="display content of the subject attendance" src="images/teacher/sub_attendance.png"><br><br>
-			<p>Here you can also take subject wise student attendance .</p>
-			<br><br>
-            <hr>
             </section>
 			<section id=" teacher Exam">
             <h4><strong>7)  Exam:</strong></h4>
@@ -1937,7 +1943,7 @@
           <img alt="display content of the invoice" src="images/admin/virtual_class/edit_Virtual_Classroom.png"><br><br>
       </section>
 			<section id="supportstaff_view">
-				<h3><strong>J) Support Staff View:</strong></h3>
+				<h3><strong>K) Support Staff View:</strong></h3>
 				 <p><strong>Dashboard:</strong> Support Staff dashboard.</p>
 				<img alt="Install plugin" src="images/staff_member/dashboard/staff_dashboard.png"><br><br>
 				 <section id="Support Staff Teacher">
@@ -2068,12 +2074,7 @@
 			<p>If you want to see attendance of any past dates then just enter date and select class and click on <strong>Take/view Attendance</strong>. 
 			You can just view past days attendance but you can't edit. While for current date it allows you to edit the attendance</p>
 			<p>If student is absent and send sms to his/her parent's then check the check-box.</p>
-			 <h5><strong>3. Subject Wise Attendance</strong></h5> 
-             <p></p>
-            <img alt="display content of the subject attendance" src="images/staff_member/attendance/sub_wise_attendance.png"><br><br>
-			<p>Here you can also take subject wise student attendance .</p>
-			<br><br>
-            <hr>
+			 
             </section>
             <section id="Support Staff Exam">
             <h4><strong>6)  Exam:</strong></h4>
@@ -2254,7 +2255,7 @@
             </section>
 			<section id="Support Staff Notice">
             <h4><strong>13) Notice:</strong></h4>
-            <p>Here You can see and manage list of Event to notice for teacher, student and all. We have provided date range in notice segment so this can also be used as event calendar</p>
+            <p>Here You can see and manage a list of Events to notice for teachers, students, and all. We have provided a date range in the notice segment so this can also be used as an event calendar</p>
             
             <img alt="display content of the notice " src="images/staff_member/notice/notice_list.png">
             <ol>
@@ -2402,7 +2403,7 @@
 		        
            
 		<section id="Update">
-			<h3><strong>K) Update & Replace School Management Plugin </strong></h3>
+			<h3><strong>L) Update & Replace School Management Plugin </strong></h3>
 			<p>Steps for Manually Update a <mark>School Management</mark> Plugin</p>
 			<ol>
 				<li>Download latest <mark>school management</mark> plugin from codecanyon.</li>
@@ -2419,7 +2420,7 @@
         
         
           <section id="FAQ">
-          	<h3><strong>L) FAQ</strong></h3>
+          	<h3><strong>M) FAQ</strong></h3>
 		 	<p><strong>1) Prerequisite section.</strong></p>
 			<p><mark>Note*</mark> The Plugin works best on Cpanel/WHM-enabled hosting. Usage/installation on Nginx / Plesk is not recommended and we will not be able to provide support for the same.</p>
 
@@ -2445,7 +2446,7 @@
             <hr>
 		</section>
 		 <section id="API-URL">
-			<h3><strong>M) API URL</strong></h3>
+			<h3><strong>N) API URL</strong></h3>
 			<p>API base url for mobile application <a href="#">http://www.yoursite.com</a></p>
 		 </section>
                     <!-- start-footer-->
