@@ -48,7 +48,7 @@
 			<div class="col-md-3 logo"> <a href="index.html"><img src="images/logo-warranty.png" width="150" id="img-logo" alt="logo"></a> </div>
 				<div class="col-md-8 col-md-offset-1 desc">
 					<h4 class="slight">School Management System</h4>
-					<h5 class="slight"><small> Documented by Mojoomla - at June 24 2025</small></h5>
+					<h5 class="slight"><small> Documented by Mojoomla - at July 02 2025</small></h5>
 				</div>
 			</div>
       <div class="col-md-4">
@@ -56,6 +56,7 @@
 			<div class="logo"> <img src="images/mojoomla_logo.png" id="img-logo" alt="mojoomla" style="margin-bottom:20px;"> </div>
 				<ul id="top-menu">
 					<li><a class="current" href="#Introduction">Introduction</a></li>
+					<li><a href="#notes">Notes</a></li>
 					<li><a href="#Installation">Installation</a></li>
 					<li><a href="#system-settings">System Settings</a></li>
 					<li><a href="#recurring-invoice">Recurring Invoices</a></li>
@@ -67,6 +68,7 @@
 					<li><a href="#teacher_view">Teacher</a></li>
 					<li><a href="#supportstaff_view">Support Staff</a></li>
 					<li><a href="#Update">Update Plugin</a></li>
+					<li><a href="#Import_file">Import File</a></li>
 					<li><a href="#FAQ">FAQ</a></li>
 					<li><a href="#mobile-app">Mobile APP Setting</a></li>
 					<li><a href="#API-URL">API URL</a></li>
@@ -79,16 +81,29 @@
 					<div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo"></a> </div>
 						<div class="col-md-8 col-md-offset-1 desc">
 						  <h4 class="slight">School Management System</h4>
-						  <h5 class="slight"><small> Created and modified by Mojoomla </a> - June 24 2025</small></h5>
+						  <h5 class="slight"><small> Created and modified by Mojoomla </a> - August 21 2025</small></h5>
 						</div>
 					</div>
 					<hr class="vertical-space2">
-					<p align="center"><img src="images/preview-image.jpg"></p>
+					<p align="center"><img src="images/preview-image.png"></p>
 					<h3><strong>A) Introduction</strong></h3>
 					<p>School Management System Plugin for WordPress is the ideal way to manage complete school operations. The system has different access rights for Admin, Teacher, Student, Parent and Management.
 					</p>
 					<p>This user guide covers all options that this plugin provides. Please read the documentation carefully as it probably contains answers to most of the questions that may arise. If you feel some aspect is not covered or have some questions, contact us via e-mail sales@mojoomla.com. We will do our best to answer you in the shortest  time.</p>
 					<iframe width="730" height="315" src="https://www.youtube.com/embed/H2oDKfMVN-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<hr>
+					<h3 id="notes"><strong>Note: Database Table & Option Name Changes (for Existing Users)</strong></h3>
+					<p>We have updated the <strong>database table names</strong> and <strong>WordPress option names</strong> used by this plugin.
+					To ensure these changes are applied correctly to your site, please follow the steps below:</p>
+					<ul>
+						<li>1. <strong>Deactivate</strong> the plugin from your WordPress dashboard.</li>
+						<li>2. <strong>Activate</strong> the plugin again.</li>
+					</ul>
+					<p>This process will automatically update your database table names and option names while <strong>keeping all existing data intact.</strong></p>
+					<p>No data will be lost during this update.</p>
+					<img alt="" src="images/name_change.PNG">
+					<p></p>
+					<img alt="" src="images/option_change.PNG">
 					<section id="Package">
 						<hr>
 						<section id="Installation">
@@ -119,7 +134,7 @@
 									</li><br>
 									<li>
 										<h5><strong>2. Get the plugin archive</strong></h5>
-										<p>You can get <mark>school_managment.zip</mark> file on a downloaded plugin zip file.</p>
+										<p>You can get <mark>mjschool.zip</mark> file on a downloaded plugin zip file.</p>
 									</li><br>
 									<li>
 										<h5><strong>3. Upload your plugin archive</strong></h5>
@@ -188,13 +203,18 @@
 										<li><strong>School Address: </strong>Enter the address of the school.</li>
 										<li><strong>Official Phone Number: </strong>Enter official phone number of the school.</li>
 										<li><strong>Country: </strong>Enter country of School Located in.</li>
+										<li><strong>City: </strong>Enter city of School Located in.</li>
 										<li><strong>E-mail: </strong>Enter official e-mail address of the school.</li>
 										<li><strong>School Logo: </strong>Enter school logo.</li>
 										<li><strong>Profile Cover Image: </strong>Upload school photo and this will be used for profile background.</li>
 										<li><strong>Enable Sandbox: </strong>If you are testing PayPal payments then it should be enable/checked.You will require PayPal sandbox account.</li>
 										<li><strong>System Color: </strong>You can change system color.</li>
+										<li><strong>System Prefix: </strong>Student Prefix of Student id.</li>
 										<li><strong>Paypal Email Id: </strong>Enter here your email id.</li>
 										<li><strong>Select Currency: </strong>From here select your currency.</li>
+										<li><strong>Fees Payment Reminder: </strong>Fees Payment Reminder option.</li>
+										<li><strong>Invoice in Tabuler format: </strong>give tabular format in invoice.</li>
+										<li><strong>Reminder Before Day: </strong>days Reminder Before Day.</li>
 										<li><strong>Mail Notification: </strong>If you enable mail notification then the system send mail notification to users then it should be enabled/checked.</li>
 										<li><strong>Virtual Classroom: </strong>If you enable Virtual Classroom then you will use Virtual Classroom in our system by enabled/checked.</li>
 										<li><strong>Client Id: </strong>That will be provided by zoom.</li>
@@ -225,6 +245,29 @@
 								<p>In the <strong>Group Exam Result Settings</strong> allows administrators to configure and manage exam result grouping for different classes and sections.</p>
 								<img alt="" src="images/admin/ganeral_setting/group_exam_result_settings.png">
 								<br><br>
+								<h5><strong>2.6) Student Onboarding Settings</strong></h5>
+								<p>The <strong>"Merge Student Admission Form with Registration Form"</strong> option allows you to combine the Admission Form and Registration Form into a single form.</p>
+
+								<ul>
+									<li><strong>Admission Fees</strong>: Set the amount for admission.</li>
+									<li><strong>Registration Fees</strong>: Set the amount for registration.</li>
+								</ul>
+
+								<p>If the <strong>Merge Student Admission Form with Registration Form</strong> option is enabled, after submitting the form, the user is required to pay the <strong>Registration Fees</strong>. Upon successful payment, a <strong>Paid Invoice</strong> will be sent via email. If payment is not completed, no invoice will be sent.</p>
+
+								<img src="images/admin/ganeral_setting/student_onboard.png" alt="Student Onboarding Settings"><br><br>
+
+								<h5><strong>2.6.1) Combined Registration Form</strong></h5>
+								<p>When this option is enabled, both the Admission and Registration processes are combined into a single form. Payment is made at the time of submission using <strong>PayPal</strong>. A <strong>Paid Invoice</strong> for the selected <strong>Registration Fees</strong> will be sent to the user via email.</p>
+
+								<img src="images/admin/ganeral_setting/combine_form.png" alt="Combined Registration Form"><br><br>
+
+								<h5><strong>2.6.2) Admission Fees at Activation</strong></h5>
+								<p>When a student is approved and activated, the system will automatically generate an <strong>Unpaid Invoice</strong> for the selected <strong>Admission Fees</strong>. This unpaid invoice will be emailed to both the student and their parents.</p>
+
+								<img src="images/admin/ganeral_setting/admission_approve.png" alt="Admission Fees at Activation"><br><br>
+
+								
 								<iframe width="730" height="315" src="https://www.youtube.com/embed/vCxdYKKX9es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								<br><br>
 							</section>
@@ -401,26 +444,31 @@
 							<ul>
 								<ol>
 									<li><strong>School Name:</strong> Enter the name of your school.</li>
-									<li><strong>Starting Year: </strong>Enter a starting year of the school. </li>
-									<li><strong>School Address: </strong>Enter the address of the school.</li>
-									<li><strong>Official Phone Number: </strong>Enter official phone number of the school.</li>
-									<li><strong>Country: </strong>Enter country of School Located in.</li>
-									<li><strong>E-mail: </strong>Enter official e-mail address of the school.</li>
-									<li><strong>School Logo: </strong>Enter school logo.</li>
-									<li><strong>Profile Cover Image: </strong>Upload school photo and this will be used for profile background.</li>
-									<li><strong>Enable Sandbox: </strong>If you are testing PayPal payments then it should be enable/checked.You will require PayPal sandbox account.</li>
-									<li><strong>System Color: </strong>You can change system color.</li>
-									<li><strong>Paypal Email Id: </strong>Enter here your email id.</li>
-									<li><strong>Select Currency: </strong>From here select your currency.</li>
-									<li><strong>Mail Notification: </strong>If you enable mail notification then the system send mail notification to users then it should be enabled/checked.</li>
-									<li><strong>Virtual Classroom: </strong>If you enable Virtual Classroom then you will use Virtual Classroom in our system by enabled/checked.</li>
-									<li><strong>Client Id: </strong>That will be provided by zoom.</li>
-									<li><strong>Client Secret Id: </strong>That will be provided by zoom.</li>
-									<li><strong>Redirect URL: </strong>you have to copy Redirect URL from this section and past it into the zoom.</li>
-									<li><strong>Parent can be send message: </strong>If enable/checked then parent can send the message to their child's class student.</li>
-									<li><strong>Student can send message: </strong>If enable/checked then student can send message to each other of same class.</li>
-									<li><strong>Student Approval: </strong>If you enable the Student Approval option then your student can log in without approval on the site.</li>
-									<li><strong>Principal Singnature: </strong>Upload principal Singnature.</li>
+										<li><strong>Starting Year: </strong>Enter a starting year of the school. </li>
+										<li><strong>School Address: </strong>Enter the address of the school.</li>
+										<li><strong>Official Phone Number: </strong>Enter official phone number of the school.</li>
+										<li><strong>Country: </strong>Enter country of School Located in.</li>
+										<li><strong>City: </strong>Enter city of School Located in.</li>
+										<li><strong>E-mail: </strong>Enter official e-mail address of the school.</li>
+										<li><strong>School Logo: </strong>Enter school logo.</li>
+										<li><strong>Profile Cover Image: </strong>Upload school photo and this will be used for profile background.</li>
+										<li><strong>Enable Sandbox: </strong>If you are testing PayPal payments then it should be enable/checked.You will require PayPal sandbox account.</li>
+										<li><strong>System Color: </strong>You can change system color.</li>
+										<li><strong>System Prefix: </strong>Student Prefix of Student id.</li>
+										<li><strong>Paypal Email Id: </strong>Enter here your email id.</li>
+										<li><strong>Select Currency: </strong>From here select your currency.</li>
+										<li><strong>Fees Payment Reminder: </strong>Fees Payment Reminder option.</li>
+										<li><strong>Invoice in Tabuler format: </strong>give tabular format in invoice.</li>
+										<li><strong>Reminder Before Day: </strong>days Reminder Before Day.</li>
+										<li><strong>Mail Notification: </strong>If you enable mail notification then the system send mail notification to users then it should be enabled/checked.</li>
+										<li><strong>Virtual Classroom: </strong>If you enable Virtual Classroom then you will use Virtual Classroom in our system by enabled/checked.</li>
+										<li><strong>Client Id: </strong>That will be provided by zoom.</li>
+										<li><strong>Client Secret Id: </strong>That will be provided by zoom.</li>
+										<li><strong>Redirect URL: </strong>you have to copy Redirect URL from this section and past it into the zoom.</li>
+										<li><strong>Parent can be send message: </strong>If enable/checked then parent can send the message to their child's class student.</li>
+										<li><strong>Student can send message: </strong>If enable/checked then student can send message to each other of same class.</li>
+										<li><strong>Student Approval: </strong>If you enable the Student Approval option then your student can log in without approval on the site.</li>
+										<li><strong>Principal Singnature: </strong>Upload principal Singnature.</li>
 								 </ol>
 							</ul>
 							<hr>
@@ -539,7 +587,16 @@
 								<img alt="view result" src="images/admin/student/view_result.png">
 								<br>
 								<br> 
-								
+								<h5><strong><li>View Result Popup</li></strong></h5> 
+								<p>this give popup Teacher comment and Teacher signatire than print time add it in <strong>print and pdf</strong>  button.</p>
+								<img alt="view result" src="images/admin/student/popup.png">
+								<br>
+								<br> 
+								<h5><strong><li>Exam Result</li></strong></h5> 
+								<p>this <strong>Exam Results</strong> give all years student result he give.</p>
+								<img alt="view result" src="images/admin/student/student_exam.png">
+								<br>
+								<br>
 								<h5><strong><li>Exam Receipt</li></strong></h5> 
 								<p>Admin can view Exam Receipt of particular student by clicking on <strong>Exam Receipt</strong> button. This will open Exam Receipt list of particular Student. From here admin can dawnload Exam Receipt in PDF format. </p>
 								<p>You can also print results directly by clicking on <strong>print</strong> button.</p>
@@ -1089,6 +1146,17 @@
 				<li><strong>Year</strong>: Select year for that invoice.</li>
 				<li><strong>Enable Send Mail To Parents</strong>: Enable it if you want to send mail to parents.</li>
 			</ul>
+			<h5><strong> 5)Payment History</strong> </h5>
+            <img alt="display content of the invoice" src="images/admin/fees_payment/view_history.png"><br><br>
+            <ul>
+				<li>You can view payment history after payment by <b>Payment history</b></li>
+			</ul>
+			<h5><strong> 6)View Receipt</strong> </h5>
+            <img alt="display content of the invoice" src="images/admin/fees_payment/view_receipt.png"><br><br>
+            <ul>
+				<li>You can view payment receipt by click <strong>View Receipt.</strong></li>
+				<li>You can payment receipt print or download as pdf.</li>
+			</ul>
 			<hr>
             </section>
 			
@@ -1182,11 +1250,26 @@
 			<img alt="display " src="images/admin/reports/expense_datatable.png"><br><br>
 			<p>To generate report select all criteria and click on <strong>Go</strong> button.</p>
 			<img alt="display " src="images/admin/reports/expense_graph.png"><br><br>		
-					
-					
-							
+			<h5><strong><li> Student Report </li></strong></h5>
+			<p>Show student  report in school. Here you can generate class wise or section wise reports.</p>
+            <img alt="display " src="images/admin/reports/student_report.png"><br><br>
+			<p>To generate report select all criteria and click on <strong>Go</strong> button.</p>
+
+			<h5><strong><li>Class & Section Report </li></strong></h5>
+			<p>Show Class & Section Report in school.</p>
+            <img alt="display " src="images/admin/reports/class_and_section.png"><br><br>
+
+			<h5><strong><li>Guardian  Report </li></strong></h5>
+			<p>Show Guardian report in school. Here you can generate class wise or section wise reports.</p>
+            <img alt="display " src="images/admin/reports/Guardian.png"><br><br>
+			<p>To generate report select all criteria and click on <strong>Go</strong> button.</p>
+
+			<h5><strong><li>Sibling  Report </li></strong></h5>
+			<p>Show Sibling  report in school. Here you can generate class wise or section wise reports.</p>
+            <img alt="display " src="images/admin/reports/sibling.png"><br><br>
+			<p>To generate report select all criteria and click on <strong>Go</strong> button.</p>
 				</ol>
-            
+
             <hr>
             </section>
             
@@ -1487,13 +1570,22 @@
 				<img alt="fees_payment_list" src="images/student/payment_list.png"> <br><br> 
 					<ol>
 						<h5><strong><li>View Payment Invoice:</li></strong></h5>
-						<p>Admin can view Parent by clicking on the <strong>view</strong> button. This will open the view Teacher page. see the personal information and contact information and Time Table of the particular teacher.</p>			
+						<p>Student can view invoice by clicking on the <strong>view</strong> button. This will open the invoice. see the payment information and print and pdf option.</p>			
 						<img alt="view_teacher" src="images/student/view_payment_invoice.png">
 						<br>
 						<br> 
-					</ol>	          
+						<h5><strong><li>View Payment History:</li></strong></h5>
+						<p>Student can view receipt by clicking on the <strong>view</strong> button. This will open the receipt.</p>			
+						<img alt="view_teacher" src="images/student/view_payment_history.png">
+						<br>
+						<br>
+						<p>student see receipt information and print and pdf option.</p>
+						<img alt="view_teacher" src="images/student/view_receipt.png">
+					</ol>	
+					          
 				 <hr>
 				</section>
+
 			<section id="student-Transport">
 				<h4><strong>12) Transport:</strong></h4>
 				<p>Click on <strong>Transport List</strong> and student can see Transports List.</p> 
@@ -2445,13 +2537,333 @@
 				<li>Use a File Transfer Protocol (FTP) Client to connect to your site’s server via FTP.</li>
 				<li>Navigate to the “wp-content/plugins” folder and delete the folder of the plugin you’re updating.</li>
 				<li>Find the extracted plugin folder you just downloaded, right-click it, and press “Upload”.</li>
-				<li>Go to Wordpress Admin => <strong>Plugins</strong></li>
+				<li>Go to WordPress Admin => <strong>Plugins</strong></li>
 				<li>Deactivate/Active School Management plugin.</li>
 			</ol>
 			<hr>
 		</section>   
-        
-        
+
+		<section id="Import_file">
+			<h3><strong>M) Import File</strong></h3>
+			<h4><strong>1) Class:</strong></h4>
+			<ol>
+				<li>Go to the Class module.</li>
+				<li>Manually add class data by entering details such as Class Name, class numeric value and student capacity.</li>
+				<li>Click Save to create the class</li>
+			</ol>
+			<h4><strong>2) Teacher:</strong></h4>
+			<ol>
+				<li>Go to the <strong> User → Teacher </strong> module from the main menu.</li>
+				<li>Click on the <strong> Import CSV </strong> File button.</li>
+				<li>Click on <strong>Choose File </strong>and select your file (e.g., import_teacher.csv).</li>
+				<li>Ensure your CSV file includes the following headers:</li>
+				<ol>
+					<li><strong>Username</strong>: Unique login name for the teacher</li>
+					<li><strong>Email</strong>: Email address of the teacher</li>
+					<li><strong>First Name</strong>: Teacher’s first name</li>
+					<li><strong>Middle Name</strong>: Teacher’s middle name (if any)</li>
+					<li><strong>Last Name</strong>: Teacher’s last name</li>
+					<li><strong>Gender</strong>: Gender of the teacher (e.g., Male/Female)</li>
+					<li><strong>Birth Date</strong>: Date of birth (e.g., 1980-05-20)</li>
+					<li><strong>Address</strong>: Full residential address</li>
+					<li><strong>City Name</strong>: Name of the city</li>
+					<li><strong>State Name</strong>: Name of the state</li>
+					<li><strong>Zip Code</strong>: Postal/ZIP code</li>
+					<li><strong>Mobile Number</strong>: Primary contact number</li>
+					<li><strong>Alternate Mobile Number</strong>: Secondary contact number (optional)</li>
+					<li><strong>Phone Number</strong>: Landline or additional contact number (if any)</li>
+					<li><strong>Class Name</strong>: Class assigned to the teacher (if applicable)</li>
+				</ol>
+				<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+			</ol>
+			<img alt="display content of the subject" src="images/import_csv/teacher_import_csv.png"><br><br>
+
+			<h4><strong>3) Subject:</strong></h4>
+			<ol>
+				<li>After adding the class, go to <strong>Class → Subject</strong> module.</li>
+				<li>Click on the <strong>Import CSV File</strong> button to upload subject data.</li>
+				<li>Steps to Import Subject CSV File:
+					<ol>
+					<li>Select the appropriate Class,Section, and Teacher from the dropdown menus.</li>
+					<li>Click on <strong>Choose File</strong> and select your CSV file (e.g., import_subject.csv).</li>
+					<li>Ensure your CSV file includes the following headers:
+						<ul>
+						<li><strong>Subject Code</strong>: Unique subject code (e.g., MTH101)</li>
+						<li><strong>Subject Name</strong>: Name of the subject (e.g., Mathematics)</li>
+						<li><strong>Teacher</strong>: Assigned teacher for the subject</li>
+						<li><strong>Class Name</strong>: Class to which the subject belongs</li>
+						<li><strong>Section Name</strong>: Section of the class (e.g., A, B)</li>
+						<li><strong>Author Name</strong>: Book or material author name</li>
+						<li><strong>Edition</strong>: Book/material edition (e.g., 2nd)</li>
+						<li><strong>Created By</strong>: Name of the person creating the entry</li>
+						</ul>
+					</li>
+					<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+					</ol>
+				</li>
+			</ol>
+			<img alt="display content of the subject" src="images/import_csv/subject_import_csv.png"><br><br>
+			<h4><strong>4) Class Routine:</strong></h4>
+			<ol>
+				<li>Go to the <strong>Class → Class Routine</strong> module from the main menu.</li>
+				<li>Click on the <strong>Routine List</strong> tab.</li>
+				<li>Select the class from the list (e.g., <strong>Class 3</strong>, <strong>Class 2</strong>, <strong>Class 1</strong>, etc.).</li>
+				<li>Click on the <strong>Import CSV</strong> button.</li>
+				<li>Steps to Import Class Routine CSV File:
+					<ul>
+					<li>Click on <strong>Choose File</strong> and select your file (e.g., <strong>import_class_route.csv</strong>).</li>
+					<li>Make sure your file follows the correct format with proper headers:</li>
+						<ul>
+								<li><strong>class_name</strong>: Name of the class (e.g., Class 3)</li>
+								<li><strong>section_name</strong>: Section of the class (e.g., A, B, C)</li>
+								<li><strong>subject_id</strong>: Unique identifier for the subject</li>
+								<li><strong>subject_name</strong>: Name of the subject (e.g., Mathematics)</li>
+								<li><strong>username</strong>: Teacher's username</li>
+								<li><strong>teacher_name</strong>: Full name of the assigned teacher</li>
+								<li><strong>start_time</strong>: Class start time (e.g., 09:00 AM)</li>
+								<li><strong>end_time</strong>: Class end time (e.g., 10:00 AM)</li>
+								<li><strong>weekday</strong>: Day of the week for the class (e.g., Monday)</li>
+						</ul>
+					<li>After selecting the file, click the <strong>Import CSV</strong> button to upload the class route data.</li>
+					</ul>
+				</li>
+			</ol>
+			<img alt="display content of the class routine" src="images/import_csv/class_routine_import_csv.png"><br><br>
+			<h4><strong>4) Student:</strong></h4>
+			<ol>
+				<li>Go to the <strong>User → Student</strong> module from the main menu.</li>
+				<li>Click on the <strong>Import CSV File</strong> button to upload student data.</li>
+				<li>Steps to Import Student CSV File:
+					<ol>
+						<li>Select the appropriate <strong>Class</strong> (e.g., Class 3, Class 2, Class 1, etc.) and <strong>Section</strong> from the dropdown menus.</li>
+						<li>Click on <strong>Choose File</strong> and select your CSV file (e.g., import_student.csv).</li>
+						<li>Ensure your CSV file includes the following headers:
+							<ul>
+								<li><strong>Username</strong>: Unique login name for the student (e.g., john123)</li>
+								<li><strong>Email</strong>: Email address of the student (e.g., john123@gmail.com)</li>
+								<li><strong>Password</strong>: Login password for the student account</li>
+								<li><strong>Roll No</strong>: Student's roll number or ID (e.g., 1001)</li>
+								<li><strong>Class Name</strong>: Name of the class the student belongs to (e.g., Class 3)</li>
+								<li><strong>Class Section</strong>: Section of the class (e.g., A, B, C)</li>
+								<li><strong>First Name</strong>: Student’s first name (e.g., John)</li>
+								<li><strong>Middle Name</strong>: Student’s middle name (if any)</li>
+								<li><strong>Last Name</strong>: Student’s last name or surname</li>
+								<li><strong>Gender</strong>: Gender of the student (e.g., Male, Female)</li>
+								<li><strong>Birth Date</strong>: Date of birth in dd-mm-yyyy format (e.g., 14-05-2010)</li>
+								<li><strong>Address</strong>: Full residential address of the student</li>
+								<li><strong>City Name</strong>: Name of the city where the student lives</li>
+								<li><strong>State Name</strong>: Name of the state</li>
+								<li><strong>Zip Code</strong>: Postal/ZIP code (e.g., 12345)</li>
+								<li><strong>Mobile Number</strong>: Primary contact number</li>
+								<li><strong>Alternate Mobile Number</strong>: Optional secondary contact number</li>
+								<li><strong>Branch</strong>: Branch or campus name (e.g., Main Branch, East Campus)</li>
+								<li><strong>Mother's Name</strong>: Full name of the student’s mother</li>
+								<li><strong>father's_name</strong>: Full name of the student's father</li>
+								<li><strong>student_hobbies</strong>: Hobbies or interests of the student</li>
+								<li><strong>student_category</strong>: Category (e.g., General, OBC, SC/ST)</li>
+								<li><strong>admission_date</strong>: Date of admission (format: dd-mm-yyyy)</li>
+								<li><strong>skills</strong>: Student’s special skills (e.g., Drawing, Coding)</li>
+								<li><strong>mode_of_study</strong>: Study mode (e.g., Regular, Distance)</li>
+								<li><strong>sport_cetificate.pdf</strong>: Uploaded file name of student's sports certificate (PDF)</li>
+							</ul>
+						</li>
+						<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+					</ol>
+				</li>
+			</ol>
+			<img alt="display content of the student" src="images/import_csv/student_import_csv.png"><br><br>
+			<p>Here is your properly written instruction block for actions to follow before uploading the CSV file:</p>
+			<ol>
+					<li><strong>Instruction for Profile Image:</strong>
+						<ol>
+							<li>Create a <code>user_profile</code> folder inside <code>/wp-content/uploads/</code> path.</li>
+							<li>Upload the user profile photo into the <code>user_profile</code> folder.</li>
+							<li>Add the image path in the <code>user_profile</code> column in the CSV file. <br>
+								Example: <code>user_profile/image.png</code>
+							</li>
+						</ol>
+					</li>
+					<li><strong>Instruction for Import Custom-Field:</strong>
+						<ul>
+						<li>Add your custom-field label in the <code>custom-field</code> column of the CSV.</li>
+						<li><strong>How to add Custom Field Value:</strong>
+							<ol>
+							<li>Text field value: <code>hello world</code></li>
+							<li>Textarea field value: <code>hello world</code></li>
+							<li>Dropdown field value: <code>dropdown option 1</code></li>
+							<li>Date field value: <code>2024-01-01</code></li>
+							<li>Radio field value: <code>radio option 1</code></li>
+							<li>Checkbox field values: <code>option 1, option 2, option 3</code></li>
+							</ol>
+						</li>
+						</ul>
+					</li>
+					<li><strong>Instruction for Import Custom-Field Document:</strong>
+						<ol>
+						<li>Add your document to the <code>/wp-content/uploads/school_assets/</code> path.</li>
+						<li>Specify the document name in the <code>custom-field</code> column in the CSV file. <br>
+							Example: <code>hello.pdf</code>
+						</li>
+						</ol>
+					</li>
+			</ol>
+			<h4><strong>5) Student Attendence :</strong></h4>
+			<ol>
+				<li>Go to the <strong>Attendance → Student Attendance</strong> module from the main menu.</li>
+				<li>Click on the <strong>Import CSV File</strong> button to upload student attendance data.</li>
+				<li>
+					Steps to Import Student Attendance CSV File:
+					<ol>
+
+						<li>Click on <strong>Choose File</strong> select your CSV file (e.g., <code>import_student_attendance.csv</code>).</li>
+						<li>
+							Ensure your CSV file includes the following headers:
+							<ul>
+							<li><strong>Student Name</strong>: Full name of the student (e.g., John Smith)</li>
+							<li><strong>Student Email</strong>: Email address of the student (e.g., john@example.com)</li>
+							<li><strong>Class Name</strong>: Name of the class (e.g., Class 3)</li>
+							<li><strong>Section Name</strong>: Class section (e.g., A, B, C)</li>
+							<li><strong>Subject Name</strong>: Subject for which attendance is recorded (e.g., Mathematics)</li>
+							<li><strong>Attendence_date</strong>: Date of attendance in yyyy-mm-dd format (e.g., 2025-06-26)</li>
+							<li><strong>Status</strong>: Attendance status (e.g., Present, Absent)</li>
+							<li><strong>Comment</strong>: Optional remarks (e.g., On time, Late)</li>
+							</ul>
+						</li>
+						<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+						<li>Once uploaded successfully, the student attendance data will be visible in the <strong>Student Attendance</strong> list.</li>
+					</ol>
+				</li>
+			</ol>
+			<img alt="display content of the student attendence" src="images/import_csv/student_attendence_import_csv.png"><br><br>
+			<h4><strong>6) Parent  :</strong></h4>
+			<ol>
+				<li>Go to the <strong>User → Parent</strong> module from the main menu.</li>
+				<li>Click on the <strong>Import CSV File</strong> button to upload parent data.</li>
+				<li>Steps to Import Parent CSV File:
+					<ol>
+
+						<li>Click <strong>Choose File</strong>  and select the file (e.g., <code>import_parent.csv</code>).</li>
+						<li>Ensure your CSV file includes the following headers:
+							<ul>
+
+								<li><strong>Username</strong>: Unique login username for the parent (e.g., parent01)</li>
+								<li><strong>Email</strong>: Email address of the parent (e.g., parent01@example.com)</li>
+								<li><strong>Password</strong>: Password for the parent account</li>
+								<li><strong>First Name</strong>: Parent’s first name (e.g., John)</li>
+								<li><strong>Middle Name</strong>: Parent’s middle name (optional)</li>
+								<li><strong>Last Name</strong>: Parent’s last name or surname (e.g., Smith)</li>
+								<li><strong>Gender</strong>: Gender of the parent (e.g., Male, Female)</li>
+								<li><strong>Birth Date</strong>: Parent's date of birth in dd-mm-yyyy format (e.g., 15-08-1980)</li>
+								<li><strong>Address</strong>: Full residential address of the parent</li>
+								<li><strong>City</strong>: City where the parent resides</li>
+								<li><strong>State</strong>: State name (e.g., Texas)</li>
+								<li><strong>Zip</strong>: Postal/ZIP code (e.g., 12345)</li>
+								<li><strong>Mobile Number</strong>: Primary contact number</li>
+								<li><strong>Alt Mobile</strong>: Alternate contact number (optional)</li>
+								<li><strong>Phone</strong>: Landline or additional phone number (optional)</li>
+								<li><strong>Child Name</strong>: Name of the child linked to this parent</li>
+								<li><strong>Relation</strong>: Relationship to the child (e.g., Father, Mother, Guardian)</li>
+							</ul>
+						</li>
+					<li>After selecting the file, Click the <strong>Upload CSV File</strong> button.</li>
+					<li>Once uploaded successfully, the parent data will be visible in the <strong>Parent</strong> list.</li>
+					</ol>
+				</li>
+				<img alt="display content of the parent" src="images/import_csv/parent_import_csv.png"><br><br>
+				<p>Here is your properly written instruction block for actions to follow before uploading the CSV file:</p>
+					<ol>
+						<li><strong>Instruction for Profile Image:</strong>
+							<ol>
+								<li>Add user_profile folder in /wp-content/uploads/ Path</li>
+								<li> Upload the User Profile photo in user_profile folder</li>
+								<li>Add your image path in user_profile column in CSV. for example : user_profile/image.png</li>
+							</ol>
+						</li>
+					</ol>
+			</ol>
+			<h4><strong>5) Support Staff :</strong></h4>
+			<ol>
+				<li>Go to the <strong>User → Support Staff</strong> module from the main menu.</li>
+				<li>Click on the <strong>Import CSV File</strong> button to upload support staff data.</li>
+				<li>Steps to Import Support Staff CSV File:
+					<ol>
+					<li>Click on <strong>Choose File</strong> and select your CSV file (e.g., <em>import_support_staff.csv</em>).</li>
+					<li>Ensure your CSV file includes the following headers:
+						<ul>
+						<li><strong>Username</strong>: Unique login name for the support staff member (e.g., michaelbrown)</li>
+						<li><strong>Email</strong>: Email address of the support staff (e.g., michael@example.com)</li>
+						<li><strong>First Name</strong>: First name of the staff member (e.g., Michael)</li>
+						<li><strong>Middle Name</strong>: Middle name or initial (optional)</li>
+						<li><strong>Last Name</strong>: Last name of the staff member (e.g., Brown)</li>
+						<li><strong>Gender</strong>: Gender of the staff member (e.g., Male, Female)</li>
+						<li><strong>Birth Date</strong>: Date of birth in dd-mm-yyyy format (e.g., 01-01-1985)</li>
+						<li><strong>Address</strong>: Residential address of the staff</li>
+						<li><strong>City Name</strong>: City where the staff member resides</li>
+						<li><strong>State Name</strong>: State name (e.g., California, Texas)</li>
+						<li><strong>Zip Code</strong>: Postal/ZIP code (e.g., 90210)</li>
+						<li><strong>Mobile Number</strong>: Primary contact number</li>
+						<li><strong>Alternate Mobile Number</strong>: Secondary contact number (optional)</li>
+						<li><strong>Phone Number</strong>: Office phone or landline number (optional)</li>
+
+						</ul>
+					</li>
+					</ol>
+				<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+
+				</li>
+				<li>Once uploaded successfully, the support staff data will be visible in the <strong>Support Staff</strong> list.</li>
+				<img alt="display content of the support staff" src="images/import_csv/supportStaff_import_csv.png"><br><br>
+
+			</ol>
+			<h4><strong>5)  Library :</strong></h4>
+			<ol>
+				<li>Go to the <strong>Library</strong> module from the main menu.</li>
+				<li>Click on the <strong>Import CSV File</strong></li>
+				<li>Steps to Import Library CSV File:
+					<ol>
+						<li>Click on <strong>Choose File</strong> and select your CSV file (e.g., <em>import_book.csv</em>).</li>
+						<li>Ensure your CSV file includes the following headers:
+							<ul>
+							<li><strong>isbn</strong>: Unique 13-digit book number</li>
+							<li><strong>cat_id</strong>: Category ID</li>
+							<li><strong>book_name</strong>: Title of the book</li>
+							<li><strong>author_name</strong>: Name of the author</li>
+							<li><strong>rack_location</strong>: Rack number/location (e.g., R-5)</li>
+							<li><strong>price</strong>: Book price in numeric format</li>
+							<li><strong>quentity</strong>: Total number of books available</li>
+							<li><strong>description</strong>: Short description about the book</li>
+							</ul>
+						</li>
+					</ol>
+				<li><mark>Instruction</mark> : For Import Image First add image To /wp-content/uploads/ folder after that in your csv file add one column user_profile</li>
+				<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+					<li>Once uploaded successfully, the library data will be visible in the <strong>Library</strong> list.</li>
+				<img alt="display content of the  book" src="images/import_csv/book_import_csv.png"><br><br>
+			</ol>
+			<h4><strong>6)  Manage Marks :</strong></h4>
+			<ol>
+				<li>Go to the <strong>Student Evaluation → Manage Marks</strong> module from the main menu.</li>
+				<li>Choose the <strong>Select CSV File</strong> option to upload marks data.</li>
+				<li>Steps to Import Marks CSV File:
+					<ol>
+					<li>Click on <strong>Choose File</strong> and select your CSV file (e.g., <em>import_mark.csv</em>).</li>
+					<li>Ensure your CSV file includes the following headers:
+						<ul>
+						<li><strong>Roll No</strong>: Unique roll number of the student</li>
+						<li><strong>First Name</strong>: First name of the student</li>
+						<li><strong>marks</strong>: Marks obtained by the student</li>
+						<li><strong>comment</strong>: Any optional remark (e.g., Pass,Fail)</li>
+						</ul>
+					</li>
+					<li>After selecting the file, click the <strong>Upload CSV File</strong> button.</li>
+					<li>Once uploaded successfully, the marks data will be visible in the <strong>Manage Marks</strong> list.</li>
+					</ol>
+				</li>
+				<img alt="display content of the marks " src="images/import_csv/marks_import_csv.png"><br><br>
+
+			</ol>
+		</section>
+
         
           <section id="FAQ">
           	<h3><strong>M) FAQ</strong></h3>
