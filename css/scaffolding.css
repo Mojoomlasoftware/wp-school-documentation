@@ -7,7 +7,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-
 .container [class*="col-"],
 .container [class*="col-"]:before,
 .container [class*="col-"]:after {
@@ -15,7 +14,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 img {
   vertical-align: middle;
 }
@@ -39,29 +37,22 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-
 .clear, .clr {
-      clear: both;
-      display: block;
-      overflow: hidden;
-      visibility: hidden;
-      width: 0;
-      height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
-
 .clr {
-visibility: visible;
-overflow: visible;
+  visibility: visible;
+  overflow: visible;
 }
-
 .columns {
 	padding: 0 15px;
 }
-
 .container [class*="col-"] img { max-width:100%;}
-
 .container {
   margin-right: auto;
   margin-left: auto;
